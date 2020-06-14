@@ -55,13 +55,13 @@ public class BookingServiceImpl implements BookingService{
 	    		if(appendAdd ==true) {
 	    			sql.append(" AND");
 	    		}
-	    		sql.append(" no_of_stars = " + " " + filters.getNoOfStars());
+	    		sql.append(" no_of_stars >= " + " " + filters.getNoOfStars());
 	    	}
 	    	if(filters.getCost()!=0) {
 	    		if(appendAdd ==true) {
 	    			sql.append(" AND");
 	    		}
-	    		sql.append(" cost_of_stay = " + " " + filters.getCost());
+	    		sql.append(" cost_of_stay <= " + " " + filters.getCost());
 	    	}
 	    	if(filters.isAc()!=false) {
 	    		if(appendAdd ==true) {
